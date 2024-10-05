@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose a Learning Path</title>
+
+    <style>
+      body {
+        font-family: Poppins, sans-serif;
+        background-color: #2c003e;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      main {
+        background-color: #4b0082;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        text-align: center;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      .name {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        color: #ffccff;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #dda0dd;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 20px;
+      }
+
+      .chooseIcon {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="name">Hey <span id="player-name">Mandip Sapkota</span></p>
+      <h1>Choose What to Learn</h1>
+      <ul>
+        <li>
+          <a href="#">
+            <div class="chooseIcon"></div>
+          </a>
+        </li>
+      </ul>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

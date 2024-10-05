@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wonderers | Detail</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f3e5f5;
+        color: #4a148c;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      main {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      input[type="text"] {
+        padding: 10px;
+        border: 2px solid #4a148c;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 300px;
+      }
+      button {
+        background-color: #4a148c;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #6a1b9a;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Enter your name here</h1>
+      <form onsubmit="storeName(event)">
+        <input type="text" id="name" />
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+
+  <script>
+    function storeName(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      localStorage.setItem("name", name);
+      alert("Name stored successfully!");
+      // Simulate a mouse click:
+      window.location.href = "http://127.0.0.1:5500/quizDashboard.html";
+    }
+  </script>
+</html>
